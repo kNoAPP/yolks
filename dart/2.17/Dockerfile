@@ -3,7 +3,7 @@ FROM        --platform=$TARGETOS/$TARGETARCH dart:2.17
 LABEL       author="Alden Bansemer" maintainer="alden@knoban.com"
 
 RUN         apt update \
-            && apt -y install ffmpeg iproute2 git sqlite3 libsqlite3-dev ca-certificates openssl dnsutils zip tar curl \
+            && apt -y install iproute2 git ca-certificates tzdata \
             && useradd -m -d /home/container container
 
 USER        container
